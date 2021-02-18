@@ -1,0 +1,7 @@
+# SERVER
+server:
+    port: 7761
+#LOGGING
+logging:
+    file:
+        name: /var/log/agoero/registry-prod.log

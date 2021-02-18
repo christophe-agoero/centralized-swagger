@@ -1,0 +1,21 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Eclipse/STS ###
+.classpath
+.factorypath
+.project
+.settings
+.apt_generated
+.apt_generated_tests
+.springBeans
+.sts4-cache
+
+### Maven ###
+target
+
+### JREBEL ###
+/driver-service/src/main/resources/rebel.xml

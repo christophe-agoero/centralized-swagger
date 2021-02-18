@@ -1,0 +1,34 @@
+# SPRING
+spring:
+    # APPLICATION
+    application:
+        name: registry
+# EUREKA
+eureka:
+    # INSTANCE
+    instance:
+        hostname: localhost
+        health-check-url-path: /actuator_change_path/health
+        status-page-url-path: /actuator_change_path/info
+    # CLIENT
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    # SERVER
+    server:
+        evictionIntervalTimerInMs: 10000
+        enable-self-preservation: false
+# INFO
+info:
+    # APP
+    app:
+        name: ${spring.application.name}
+        description: Registry
+    # ENV
+    env:
+        java:
+            vendor: ${java.specification.vendor}
+            vm-name: ${java.vm.name}
+            runtime-version: ${java.runtime.version}

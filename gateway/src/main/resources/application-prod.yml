@@ -1,0 +1,20 @@
+# SERVER
+server:
+    port: 7080
+# EUREKA
+eureka:
+    client:
+        healthcheck:
+            enabled: true
+        serviceUrl:
+            defaultZone: http://user:pwd@localhost:7761/eureka
+    instance:
+        health-check-url-path: /actuator_change_path/health
+        status-page-url-path: /actuator_change_path/info
+        leaseRenewalIntervalInSeconds: 3
+        leaseExpirationDurationInSeconds: 10
+        preferIpAddress: true
+# LOG
+logging:
+    file:
+        name: /var/log/agoero/gateway-prod.log

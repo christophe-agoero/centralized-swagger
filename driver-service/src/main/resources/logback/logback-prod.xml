@@ -1,0 +1,12 @@
+<included>
+    <!-- AGOERO -->
+    <logger additivity="false" level="INFO" name="fr.agoero">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+    <!-- ROOT -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</included>
