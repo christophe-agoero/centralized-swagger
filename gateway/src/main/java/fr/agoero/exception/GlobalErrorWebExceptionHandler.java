@@ -20,8 +20,9 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHandler {
 
-    public GlobalErrorWebExceptionHandler(ErrorAttributes errorAttributes, ResourceProperties resourceProperties,
-        ApplicationContext applicationContext, ServerCodecConfigurer serverCodecConfigurer) {
+    public GlobalErrorWebExceptionHandler(ErrorAttributes errorAttributes,
+        ResourceProperties resourceProperties, ApplicationContext applicationContext,
+        ServerCodecConfigurer serverCodecConfigurer) {
         super(errorAttributes, resourceProperties, applicationContext);
         super.setMessageWriters(serverCodecConfigurer.getWriters());
         super.setMessageReaders(serverCodecConfigurer.getReaders());
@@ -30,10 +31,10 @@ public class GlobalErrorWebExceptionHandler extends AbstractErrorWebExceptionHan
     @Override
     protected RouterFunction<ServerResponse> getRoutingFunction(final ErrorAttributes errorAttributes) {
         return RouterFunctions.route(RequestPredicates.all(), this::renderErrorResponse);
-}
+    }
 
     private Mono<ServerResponse> renderErrorResponse(final ServerRequest request) {
-        final Map<String, Object> errorPropertiesMap = getErrorAttributes(request,true);
+        final Map<String, Object> errorPropertiesMap = getErrorAttributes(request, true);
         // build ApiErrorDTO from Spring error
         var apiErrorDTO = new ApiErrorDTO(errorPropertiesMap);
         // log

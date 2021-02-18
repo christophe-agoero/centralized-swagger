@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @SuppressWarnings("unused")
 public class DriverProperties {
 
-    private  final GatewayProperties gatewayProperties;
+    private final GatewayProperties gatewayProperties;
 
     @Override
     public String toString() {

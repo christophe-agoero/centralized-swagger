@@ -26,7 +26,8 @@ public class ApiErrorDTO {
      * @param errorPropertiesMap
      */
     public ApiErrorDTO(Map<String, Object> errorPropertiesMap) {
-        this.timestamp = ZonedDateTime.ofInstant(((Date)errorPropertiesMap.get("timestamp")).toInstant(), ZoneOffset.UTC).toString();
+        this.timestamp = ZonedDateTime.ofInstant(((Date) errorPropertiesMap.get("timestamp")).toInstant(),
+            ZoneOffset.UTC).toString();
         this.httpStatusCode = (int) errorPropertiesMap.get("status");
         this.httpStatusLabel = String.valueOf(errorPropertiesMap.get("error"));
         this.message = String.valueOf(errorPropertiesMap.get("message"));

@@ -22,7 +22,7 @@ public class ApiErrorDTO implements Serializable {
     private String message;
     private String details;
 
-     public ApiErrorDTO(int httpStatusCode, String httpStatusLabel, String code, String message) {
+    public ApiErrorDTO(int httpStatusCode, String httpStatusLabel, String code, String message) {
         this.timestamp = ZonedDateTime.now()
                                       .withZoneSameInstant(ZoneOffset.UTC)
                                       .format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
