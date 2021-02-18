@@ -40,6 +40,7 @@ public class SwaggerConfig {
             .apiInfo(apiInfo())
             .protocols(
                 Set.of(gatewayProperties.getProtocol()))
+            .host(gatewayProperties.getHost())
             .select()
             .apis(selector)
             .paths(PathSelectors.any())
