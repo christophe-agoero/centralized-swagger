@@ -71,6 +71,7 @@ public class SwaggerConfig {
             .globalResponses(HttpMethod.PATCH, reponseList)
             .globalResponses(HttpMethod.DELETE, reponseList)
             .additionalModels(typeResolver.resolve(ApiErrorDTO.class))
+            .host(gatewayProperties.getHost())
             .select()
             .apis(selector)
             .paths(PathSelectors.any())
