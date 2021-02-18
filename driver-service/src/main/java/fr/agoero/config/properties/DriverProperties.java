@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class DriverProperties {
 
     private final GatewayProperties gatewayProperties;
+    private final SwaggerProperties swaggerProperties;
 
     @Override
     public String toString() {
@@ -24,6 +25,7 @@ public class DriverProperties {
             "\n------------------ Log all properties begin ------------------\n\n",
             "\n\n------------------ Log all properties end ------------------")
             .add(gatewayProperties.toString())
+            .add(swaggerProperties.toString())
             .toString();
     }
 

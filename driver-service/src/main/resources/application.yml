@@ -26,3 +26,13 @@ info:
             vendor: ${java.specification.vendor}
             vm-name: ${java.vm.name}
             runtime-version: ${java.runtime.version}
+# SWAGGER
+swagger:
+    contact-email: christophe.agoero@gmail.com
+    contact-name: Christophe Agoero
+    contact-url:
+    description: Driver description
+    license:
+    license-url:
+    terms-of-service-url:
+    title: Driver title
