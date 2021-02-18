@@ -20,6 +20,7 @@
         <java.version>14</java.version>
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
         <apache.commons.collections4.version>4.4</apache.commons.collections4.version>
+        <springfox.version>3.0.0</springfox.version>
     </properties>
 
     <modules>
@@ -45,6 +46,12 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- springfox -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
             </dependency>
             <!-- apache commons -->
             <dependency>
