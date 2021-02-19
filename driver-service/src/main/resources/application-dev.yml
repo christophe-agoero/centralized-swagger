@@ -25,3 +25,6 @@ logging:
 gateway:
     host: www.agoero-dev.fr/api
     protocol: http
+# SWAGGER
+swagger:
+    display-all: true

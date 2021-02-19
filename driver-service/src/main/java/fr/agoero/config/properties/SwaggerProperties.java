@@ -31,5 +31,6 @@ public class SwaggerProperties {
     private String termsOfServiceUrl;
     @NotNull
     private String title;
+    private boolean displayAll;
 
 }

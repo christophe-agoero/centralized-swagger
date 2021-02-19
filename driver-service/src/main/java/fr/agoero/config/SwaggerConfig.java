@@ -45,7 +45,9 @@ public class SwaggerConfig {
      */
     @Bean
     public Docket docket() {
-        Predicate<RequestHandler> selector = RequestHandlerSelectors.basePackage("fr.agoero.controller");
+        Predicate<RequestHandler> selector = swaggerProperties.isDisplayAll()
+        ? RequestHandlerSelectors.basePackage("fr.agoero.controller")
+        : RequestHandlerSelectors.basePackage("fr.agoero.controller.external");
         List<Response> reponseList = List.of(
             new ResponseBuilder()
                 .code(String.valueOf(HttpStatus.UNAUTHORIZED.value()))
