@@ -14,6 +14,9 @@ eureka:
         leaseRenewalIntervalInSeconds: 3
         leaseExpirationDurationInSeconds: 10
         preferIpAddress: true
+        metadataMap:
+            swaggerEnabled: true
+            swaggerPath: v2/api-docs
 # LOG
 logging:
     file:
