@@ -1,0 +1,38 @@
+# SPRING
+spring:
+    # APPLICATION
+    application:
+        name: driver-service-all
+    # MAIN
+    main:
+        allow-bean-definition-overriding: true
+# ACTUATOR
+management:
+    # ENDPOINTS
+    endpoints:
+        web:
+            base-path: /actuator_change_path
+            exposure:
+                include: '*'
+# INFO
+info:
+    # APP
+    app:
+        name: ${spring.application.name}
+        description: Driver service
+    # ENV
+    env:
+        java:
+            vendor: ${java.specification.vendor}
+            vm-name: ${java.vm.name}
+            runtime-version: ${java.runtime.version}
+# SWAGGER
+swagger:
+    contact-email: christophe.agoero@gmail.com
+    contact-name: Christophe Agoero
+    contact-url:
+    description: Driver all description
+    license:
+    license-url:
+    terms-of-service-url:
+    title: Driver all title

@@ -27,6 +27,8 @@
         <module>registry</module>
         <module>gateway</module>
         <module>driver-service</module>
+        <module>driver-service-all</module>
+        <module>driver-service-nothing</module>
     </modules>
 
     <repositories>

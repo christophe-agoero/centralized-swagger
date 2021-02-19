@@ -19,3 +19,5 @@ target
 
 ### JREBEL ###
 /driver-service/src/main/resources/rebel.xml
+/driver-service-all/src/main/resources/rebel.xml
+/driver-service-nothing/src/main/resources/rebel.xml

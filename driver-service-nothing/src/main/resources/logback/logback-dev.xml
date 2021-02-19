@@ -1,0 +1,12 @@
+<included>
+    <!-- AGOERO -->
+    <logger additivity="false" level="DEBUG" name="fr.agoero">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <!-- SPRING -->
+    <logger level="INFO" name="org.springframework"/>
+    <!-- ROOT -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</included>

@@ -1,0 +1,30 @@
+# SERVER
+server:
+    port: 8082
+# EUREKA
+eureka:
+    client:
+        healthcheck:
+            enabled: true
+        serviceUrl:
+            defaultZone: http://user:pwd@localhost:8761/eureka
+    instance:
+        health-check-url-path: /actuator_change_path/health
+        status-page-url-path: /actuator_change_path/info
+        leaseRenewalIntervalInSeconds: 3
+        leaseExpirationDurationInSeconds: 10
+        preferIpAddress: true
+        metadataMap:
+            swaggerEnabled: true
+            swaggerPath: v2/api-docs
+# LOG
+logging:
+    file:
+        name: /var/log/agoero/driver-all-dev.log
+# GATEWAY
+gateway:
+    host: www.agoero-dev.fr/api
+    protocol: http
+# SWAGGER
+swagger:
+    display-all: true
