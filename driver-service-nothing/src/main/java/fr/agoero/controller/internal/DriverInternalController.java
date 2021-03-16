@@ -40,7 +40,10 @@ public class DriverInternalController {
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @ApiOperation("Update driver rating")
     @ApiResponses(
-        @ApiResponse(code = 404, message = "Driver not found", response = ApiErrorDTO.class)
+        {
+            @ApiResponse(code = 404, message = "Driver not found", response = ApiErrorDTO.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = ApiErrorDTO.class)
+        }
     )
     public ResponseEntity<Void> patchRating(
         @ApiParam(required = true, value = "Driver identifier", example = "3") @PathVariable final int id,
@@ -63,7 +66,10 @@ public class DriverInternalController {
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @ApiOperation("Update driver price per hour")
     @ApiResponses(
-        @ApiResponse(code = 404, message = "Driver not found", response = ApiErrorDTO.class)
+        {
+            @ApiResponse(code = 404, message = "Driver not found", response = ApiErrorDTO.class),
+            @ApiResponse(code = 400, message = "Bad Request", response = ApiErrorDTO.class)
+        }
     )
     public ResponseEntity<Void> patchPricePerHour(
         @ApiParam(required = true, value = "Driver identifier", example = "3") @PathVariable final int id,
